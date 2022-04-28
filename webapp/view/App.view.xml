@@ -1,0 +1,13 @@
+<mvc:View
+	controllerName="br.com.app.mockserver.sapui5appmockserver.controller.App"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true"
+	height="100%">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
