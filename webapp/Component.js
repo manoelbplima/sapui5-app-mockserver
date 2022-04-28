@@ -8,6 +8,7 @@ sap.ui.define([
 
         return UIComponent.extend("br.com.app.mockserver.sapui5appmockserver.Component", {
             metadata: {
+                interfaces: [ "sap.ui.core.IAsyncContentCreation" ],
                 manifest: "json"
             },
 

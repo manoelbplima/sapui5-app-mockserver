@@ -86,34 +86,65 @@
         "viewType": "XML",
         "async": true,
         "viewPath": "br.com.app.mockserver.sapui5appmockserver.view",
-        "controlAggregation": "pages",
         "controlId": "app",
-        "clearControlAggregation": false
+        "controlAggregation": "pages"
       },
       "routes": [
         {
-          "name": "RouteView1",
-          "pattern": "RouteView1",
+          "pattern": "",
+          "name": "",
           "target": [
-            "TargetView1"
+            "home-target"
+          ]
+        },
+        {
+          "pattern": "list",
+          "name": "list",
+          "target": [
+            "list-target"
+          ]
+        },
+        {
+          "pattern": "detail/{MeetupID}",
+          "name": "detail",
+          "target": [
+            "detail-target"
           ]
         }
       ],
       "targets": {
-        "TargetView1": {
-          "viewType": "XML",
-          "transition": "slide",
-          "clearControlAggregation": false,
-          "viewId": "View1",
-          "viewName": "View1"
+        "home-target": {
+          "viewId": "Home",
+          "viewName": "Home",
+          "viewlevel" : 1
+        },
+        "list-target": {
+          "viewPath": "br.com.app.mockserver.sapui5appmockserver.view",
+          "viewName": "List",
+          "parent": "home-target",
+          "controlId": "homeNavContainer",
+          "controlAggregation": "pages",
+          "transition": "flip",
+          "viewlevel" : 2,
+          "viewId": "List"
+        },
+        "detail-target": {
+          "viewPath": "br.com.app.mockserver.sapui5appmockserver.view",
+          "viewName": "Detail",
+          "parent": "home-target",
+          "controlId": "homeNavContainer",
+          "controlAggregation": "pages",
+          "transition": "flip",
+          "viewlevel" : 3,
+          "viewId": "Detail"
         }
       }
     },
     "rootView": {
-      "viewName": "br.com.app.mockserver.sapui5appmockserver.view.View1",
+      "id": "rootView",
+      "viewName": "br.com.app.mockserver.sapui5appmockserver.view.App",
       "type": "XML",
-      "async": true,
-      "id": "View1"
+      "async": true
     }
   }
 }

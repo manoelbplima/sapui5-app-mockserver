@@ -1,0 +1,12 @@
+<mvc:View
+	controllerName="br.com.app.mockserver.sapui5appmockserver.controller.Home"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+>
+<Page id="homePage" title="Application Using MockServer">
+    <NavContainer id="homeNavContainer">
+        <pages>
+        </pages>
+    </NavContainer>
+</Page>
+</mvc:View>
